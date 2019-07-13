@@ -1,0 +1,476 @@
+2019-07-13 13:36:31,904 p=56611 u=superzjn |  ERROR! the role 'gnome' was not found in /home/superzjn/Downloads/ansible-ubuntu/roles:/home/superzjn/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/home/superzjn/Downloads/ansible-ubuntu
+
+The error appears to be in '/home/superzjn/Downloads/ansible-ubuntu/ansible-desktop.yml': line 77, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+   # - { role: xfce-dockbarx}             # xfce桌面
+     - { role: gnome}                     # gnome extensions and gnome tweak
+       ^ here
+
+2019-07-13 13:36:49,392 p=56620 u=superzjn |  PLAY [Ubuntu desktop environment playbook] *********************************************************************************************
+2019-07-13 13:36:49,431 p=56620 u=superzjn |  TASK [debug : Show user] ***************************************************************************************************************
+2019-07-13 13:36:49,432 p=56620 u=superzjn |  Saturday 13 July 2019  13:36:49 -0700 (0:00:00.056)       0:00:00.056 ********* 
+2019-07-13 13:36:49,446 p=56620 u=superzjn |  ok: [localhost] => 
+  msg: auth superzjn
+2019-07-13 13:36:49,461 p=56620 u=superzjn |  TASK [debug : date] ********************************************************************************************************************
+2019-07-13 13:36:49,461 p=56620 u=superzjn |  Saturday 13 July 2019  13:36:49 -0700 (0:00:00.029)       0:00:00.085 ********* 
+2019-07-13 13:36:49,676 p=56620 u=superzjn |  changed: [localhost]
+2019-07-13 13:36:49,691 p=56620 u=superzjn |  TASK [debug : ls] **********************************************************************************************************************
+2019-07-13 13:36:49,691 p=56620 u=superzjn |  Saturday 13 July 2019  13:36:49 -0700 (0:00:00.229)       0:00:00.315 ********* 
+2019-07-13 13:36:49,793 p=56620 u=superzjn |  changed: [localhost]
+2019-07-13 13:36:49,807 p=56620 u=superzjn |  TASK [debug : Show debug info] *********************************************************************************************************
+2019-07-13 13:36:49,807 p=56620 u=superzjn |  Saturday 13 July 2019  13:36:49 -0700 (0:00:00.116)       0:00:00.431 ********* 
+2019-07-13 13:36:49,824 p=56620 u=superzjn |  ok: [localhost] => 
+  result:
+    changed: true
+    cmd: date
+    delta: '0:00:00.001828'
+    end: '2019-07-13 13:36:49.660669'
+    failed: false
+    rc: 0
+    start: '2019-07-13 13:36:49.658841'
+    stderr: ''
+    stderr_lines: []
+    stdout: Sat Jul 13 13:36:49 PDT 2019
+    stdout_lines:
+    - Sat Jul 13 13:36:49 PDT 2019
+2019-07-13 13:36:49,839 p=56620 u=superzjn |  TASK [debug : Install common packages] *************************************************************************************************
+2019-07-13 13:36:49,839 p=56620 u=superzjn |  Saturday 13 July 2019  13:36:49 -0700 (0:00:00.031)       0:00:00.463 ********* 
+2019-07-13 13:36:50,973 p=56620 u=superzjn |  ok: [localhost]
+2019-07-13 13:36:50,987 p=56620 u=superzjn |  TASK [java-openjdk : Install Default OpenJDK] ******************************************************************************************
+2019-07-13 13:36:50,988 p=56620 u=superzjn |  Saturday 13 July 2019  13:36:50 -0700 (0:00:01.148)       0:00:01.612 ********* 
+2019-07-13 13:36:51,977 p=56620 u=superzjn |  ok: [localhost]
+2019-07-13 13:36:51,992 p=56620 u=superzjn |  TASK [phantomjs : Ensure PhantomJS native package is absent(无界面浏览器)] *******************************************************************
+2019-07-13 13:36:51,992 p=56620 u=superzjn |  Saturday 13 July 2019  13:36:51 -0700 (0:00:01.004)       0:00:02.616 ********* 
+2019-07-13 13:36:56,218 p=56620 u=superzjn |  changed: [localhost]
+2019-07-13 13:36:56,233 p=56620 u=superzjn |  TASK [phantomjs : Install PhantomJS dependencies] **************************************************************************************
+2019-07-13 13:36:56,233 p=56620 u=superzjn |  Saturday 13 July 2019  13:36:56 -0700 (0:00:04.241)       0:00:06.857 ********* 
+2019-07-13 13:36:56,246 p=56620 u=superzjn |  fatal: [localhost]: FAILED! => 
+  msg: |-
+    The task includes an option with an undefined variable. The error was: 'package' is undefined
+  
+    The error appears to be in '/home/superzjn/Downloads/ansible-ubuntu/roles/phantomjs/tasks/main.yml': line 7, column 3, but may
+    be elsewhere in the file depending on the exact syntax problem.
+  
+    The offending line appears to be:
+  
+  
+    - name: Install PhantomJS dependencies
+      ^ here
+2019-07-13 13:36:56,248 p=56620 u=superzjn |  PLAY RECAP *****************************************************************************************************************************
+2019-07-13 13:36:56,249 p=56620 u=superzjn |  localhost                  : ok=7    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-07-13 13:36:56,249 p=56620 u=superzjn |  Saturday 13 July 2019  13:36:56 -0700 (0:00:00.015)       0:00:06.873 ********* 
+2019-07-13 13:36:56,249 p=56620 u=superzjn |  =============================================================================== 
+2019-07-13 13:36:56,249 p=56620 u=superzjn |  phantomjs : Ensure PhantomJS native package is absent(无界面浏览器) ------------------------------------------------------------------- 4.24s
+2019-07-13 13:36:56,249 p=56620 u=superzjn |  debug : Install common packages ------------------------------------------------------------------------------------------------- 1.15s
+2019-07-13 13:36:56,249 p=56620 u=superzjn |  java-openjdk : Install Default OpenJDK ------------------------------------------------------------------------------------------ 1.00s
+2019-07-13 13:36:56,249 p=56620 u=superzjn |  debug : date -------------------------------------------------------------------------------------------------------------------- 0.23s
+2019-07-13 13:36:56,249 p=56620 u=superzjn |  debug : ls ---------------------------------------------------------------------------------------------------------------------- 0.12s
+2019-07-13 13:36:56,249 p=56620 u=superzjn |  debug : Show debug info --------------------------------------------------------------------------------------------------------- 0.03s
+2019-07-13 13:36:56,249 p=56620 u=superzjn |  debug : Show user --------------------------------------------------------------------------------------------------------------- 0.03s
+2019-07-13 13:36:56,249 p=56620 u=superzjn |  phantomjs : Install PhantomJS dependencies -------------------------------------------------------------------------------------- 0.02s
+2019-07-13 13:38:36,409 p=57532 u=superzjn |  PLAY [Ubuntu desktop environment playbook] *********************************************************************************************
+2019-07-13 13:38:36,449 p=57532 u=superzjn |  TASK [debug : Show user] ***************************************************************************************************************
+2019-07-13 13:38:36,449 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:36 -0700 (0:00:00.055)       0:00:00.055 ********* 
+2019-07-13 13:38:36,461 p=57532 u=superzjn |  ok: [localhost] => 
+  msg: auth superzjn
+2019-07-13 13:38:36,476 p=57532 u=superzjn |  TASK [debug : date] ********************************************************************************************************************
+2019-07-13 13:38:36,476 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:36 -0700 (0:00:00.027)       0:00:00.083 ********* 
+2019-07-13 13:38:36,676 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:38:36,692 p=57532 u=superzjn |  TASK [debug : ls] **********************************************************************************************************************
+2019-07-13 13:38:36,693 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:36 -0700 (0:00:00.216)       0:00:00.299 ********* 
+2019-07-13 13:38:36,795 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:38:36,809 p=57532 u=superzjn |  TASK [debug : Show debug info] *********************************************************************************************************
+2019-07-13 13:38:36,810 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:36 -0700 (0:00:00.117)       0:00:00.416 ********* 
+2019-07-13 13:38:36,824 p=57532 u=superzjn |  ok: [localhost] => 
+  result:
+    changed: true
+    cmd: date
+    delta: '0:00:00.001529'
+    end: '2019-07-13 13:38:36.662883'
+    failed: false
+    rc: 0
+    start: '2019-07-13 13:38:36.661354'
+    stderr: ''
+    stderr_lines: []
+    stdout: Sat Jul 13 13:38:36 PDT 2019
+    stdout_lines:
+    - Sat Jul 13 13:38:36 PDT 2019
+2019-07-13 13:38:36,839 p=57532 u=superzjn |  TASK [debug : Install common packages] *************************************************************************************************
+2019-07-13 13:38:36,839 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:36 -0700 (0:00:00.029)       0:00:00.445 ********* 
+2019-07-13 13:38:37,955 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:37,969 p=57532 u=superzjn |  TASK [java-openjdk : Install Default OpenJDK] ******************************************************************************************
+2019-07-13 13:38:37,969 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:37 -0700 (0:00:01.130)       0:00:01.575 ********* 
+2019-07-13 13:38:38,945 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:38,960 p=57532 u=superzjn |  TASK [phantomjs : Ensure PhantomJS native package is absent(无界面浏览器)] *******************************************************************
+2019-07-13 13:38:38,960 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:38 -0700 (0:00:00.990)       0:00:02.566 ********* 
+2019-07-13 13:38:39,593 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:39,608 p=57532 u=superzjn |  TASK [phantomjs : Install PhantomJS dependencies] **************************************************************************************
+2019-07-13 13:38:39,608 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:39 -0700 (0:00:00.648)       0:00:03.214 ********* 
+2019-07-13 13:38:45,272 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:38:45,287 p=57532 u=superzjn |  TASK [phantomjs : Check PhantomJS version] *********************************************************************************************
+2019-07-13 13:38:45,287 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:45 -0700 (0:00:05.679)       0:00:08.893 ********* 
+2019-07-13 13:38:45,383 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:45,398 p=57532 u=superzjn |  TASK [phantomjs : Cleanup PhantomJS existing installation] *****************************************************************************
+2019-07-13 13:38:45,398 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:45 -0700 (0:00:00.110)       0:00:09.004 ********* 
+2019-07-13 13:38:45,408 p=57532 u=superzjn |  [DEPRECATION WARNING]: Using tests as filters is deprecated. Instead of using `result|failed` use `result is failed`. This feature will
+ be removed in version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-07-13 13:38:45,411 p=57532 u=superzjn |  skipping: [localhost]
+2019-07-13 13:38:45,425 p=57532 u=superzjn |  TASK [phantomjs : Download PhantomJS archive] ******************************************************************************************
+2019-07-13 13:38:45,425 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:45 -0700 (0:00:00.027)       0:00:09.031 ********* 
+2019-07-13 13:38:45,435 p=57532 u=superzjn |  [DEPRECATION WARNING]: Using tests as filters is deprecated. Instead of using `result|failed` use `result is failed`. This feature will
+ be removed in version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-07-13 13:38:45,437 p=57532 u=superzjn |  skipping: [localhost]
+2019-07-13 13:38:45,452 p=57532 u=superzjn |  TASK [phantomjs : Extract PhantomJS archive] *******************************************************************************************
+2019-07-13 13:38:45,452 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:45 -0700 (0:00:00.026)       0:00:09.058 ********* 
+2019-07-13 13:38:45,462 p=57532 u=superzjn |  [DEPRECATION WARNING]: Using tests as filters is deprecated. Instead of using `result|failed` use `result is failed`. This feature will
+ be removed in version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-07-13 13:38:45,465 p=57532 u=superzjn |  skipping: [localhost]
+2019-07-13 13:38:45,479 p=57532 u=superzjn |  TASK [phantomjs : Install PhantomJS] ***************************************************************************************************
+2019-07-13 13:38:45,479 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:45 -0700 (0:00:00.027)       0:00:09.085 ********* 
+2019-07-13 13:38:45,489 p=57532 u=superzjn |  [DEPRECATION WARNING]: Using tests as filters is deprecated. Instead of using `result|failed` use `result is failed`. This feature will
+ be removed in version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-07-13 13:38:45,492 p=57532 u=superzjn |  skipping: [localhost]
+2019-07-13 13:38:45,507 p=57532 u=superzjn |  TASK [phantomjs : Make PhantomJS executable] *******************************************************************************************
+2019-07-13 13:38:45,507 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:45 -0700 (0:00:00.027)       0:00:09.113 ********* 
+2019-07-13 13:38:45,517 p=57532 u=superzjn |  [DEPRECATION WARNING]: Using tests as filters is deprecated. Instead of using `result|failed` use `result is failed`. This feature will
+ be removed in version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-07-13 13:38:45,520 p=57532 u=superzjn |  skipping: [localhost]
+2019-07-13 13:38:45,535 p=57532 u=superzjn |  TASK [phantomjs : Cleanup PhantomJS installer] *****************************************************************************************
+2019-07-13 13:38:45,535 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:45 -0700 (0:00:00.028)       0:00:09.141 ********* 
+2019-07-13 13:38:45,747 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:45,762 p=57532 u=superzjn |  TASK [phantomjs : Cleanup PhantomJS installer] *****************************************************************************************
+2019-07-13 13:38:45,762 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:45 -0700 (0:00:00.226)       0:00:09.368 ********* 
+2019-07-13 13:38:45,856 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:45,870 p=57532 u=superzjn |  TASK [intellij : Install "intellij-idea-ultimate" with option --classic] ***************************************************************
+2019-07-13 13:38:45,870 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:45 -0700 (0:00:00.108)       0:00:09.476 ********* 
+2019-07-13 13:38:46,737 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:46,752 p=57532 u=superzjn |  TASK [docker : Installing apt-key] *****************************************************************************************************
+2019-07-13 13:38:46,752 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:46 -0700 (0:00:00.881)       0:00:10.358 ********* 
+2019-07-13 13:38:48,051 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:48,067 p=57532 u=superzjn |  TASK [docker : Add deb repository] *****************************************************************************************************
+2019-07-13 13:38:48,067 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:48 -0700 (0:00:01.314)       0:00:11.673 ********* 
+2019-07-13 13:38:48,455 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:48,470 p=57532 u=superzjn |  TASK [docker : Install] ****************************************************************************************************************
+2019-07-13 13:38:48,471 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:48 -0700 (0:00:00.403)       0:00:12.077 ********* 
+2019-07-13 13:38:49,453 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:49,467 p=57532 u=superzjn |  TASK [docker : Create Docker group] ****************************************************************************************************
+2019-07-13 13:38:49,467 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:49 -0700 (0:00:00.996)       0:00:13.073 ********* 
+2019-07-13 13:38:49,683 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:49,702 p=57532 u=superzjn |  TASK [docker : Add current user to Docker group] ***************************************************************************************
+2019-07-13 13:38:49,702 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:49 -0700 (0:00:00.234)       0:00:13.308 ********* 
+2019-07-13 13:38:49,968 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:49,986 p=57532 u=superzjn |  TASK [docker : Ensure Docker is started] ***********************************************************************************************
+2019-07-13 13:38:49,986 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:49 -0700 (0:00:00.284)       0:00:13.592 ********* 
+2019-07-13 13:38:50,631 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:38:50,646 p=57532 u=superzjn |  TASK [ssh : Install SSH Server] ********************************************************************************************************
+2019-07-13 13:38:50,646 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:50 -0700 (0:00:00.659)       0:00:14.252 ********* 
+2019-07-13 13:38:51,623 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:51,640 p=57532 u=superzjn |  TASK [ssh : Allow password authentication] *********************************************************************************************
+2019-07-13 13:38:51,641 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:51 -0700 (0:00:00.994)       0:00:15.247 ********* 
+2019-07-13 13:38:51,861 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:51,878 p=57532 u=superzjn |  TASK [ssh : Disallow root SSH access] **************************************************************************************************
+2019-07-13 13:38:51,878 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:51 -0700 (0:00:00.237)       0:00:15.484 ********* 
+2019-07-13 13:38:51,978 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:38:51,994 p=57532 u=superzjn |  TASK [ssh : Ensure SSH is started] *****************************************************************************************************
+2019-07-13 13:38:51,994 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:51 -0700 (0:00:00.115)       0:00:15.600 ********* 
+2019-07-13 13:38:52,166 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:38:52,181 p=57532 u=superzjn |  TASK [desktop : Install common desktop packages] ***************************************************************************************
+2019-07-13 13:38:52,181 p=57532 u=superzjn |  Saturday 13 July 2019  13:38:52 -0700 (0:00:00.187)       0:00:15.787 ********* 
+2019-07-13 13:39:02,563 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:39:02,578 p=57532 u=superzjn |  TASK [desktop : Install common desktop packages if Ubuntu 16.04] ***********************************************************************
+2019-07-13 13:39:02,578 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:02 -0700 (0:00:10.396)       0:00:26.184 ********* 
+2019-07-13 13:39:02,589 p=57532 u=superzjn |  skipping: [localhost]
+2019-07-13 13:39:02,603 p=57532 u=superzjn |  TASK [desktop : Block Ubuntu product search in system host file] ***********************************************************************
+2019-07-13 13:39:02,604 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:02 -0700 (0:00:00.025)       0:00:26.210 ********* 
+2019-07-13 13:39:02,703 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:39:02,718 p=57532 u=superzjn |  TASK [desktop : Ensure that lightdm configuration directory exists] ********************************************************************
+2019-07-13 13:39:02,718 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:02 -0700 (0:00:00.114)       0:00:26.324 ********* 
+2019-07-13 13:39:02,815 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:39:02,829 p=57532 u=superzjn |  TASK [desktop : Disable guest session in lightdm] **************************************************************************************
+2019-07-13 13:39:02,829 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:02 -0700 (0:00:00.111)       0:00:26.435 ********* 
+2019-07-13 13:39:03,045 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:39:03,060 p=57532 u=superzjn |  TASK [desktop : Disable apport] ********************************************************************************************************
+2019-07-13 13:39:03,060 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:03 -0700 (0:00:00.230)       0:00:26.666 ********* 
+2019-07-13 13:39:03,158 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:39:03,172 p=57532 u=superzjn |  TASK [desktop-cleanup : Ensure Unity MediaScanner is removed (useless + cause high CPU peaks)] *****************************************
+2019-07-13 13:39:03,172 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:03 -0700 (0:00:00.112)       0:00:26.778 ********* 
+2019-07-13 13:39:03,804 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:39:03,819 p=57532 u=superzjn |  TASK [desktop-cleanup : Remove Amazon and others Unity shits] **************************************************************************
+2019-07-13 13:39:03,819 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:03 -0700 (0:00:00.647)       0:00:27.425 ********* 
+2019-07-13 13:39:04,449 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:39:04,463 p=57532 u=superzjn |  TASK [desktop-cleanup : Remove games] **************************************************************************************************
+2019-07-13 13:39:04,464 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:04 -0700 (0:00:00.644)       0:00:28.070 ********* 
+2019-07-13 13:39:05,091 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:39:05,106 p=57532 u=superzjn |  TASK [desktop-cleanup : Ubuntu | Uninstall libre office] *******************************************************************************
+2019-07-13 13:39:05,106 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:05 -0700 (0:00:00.642)       0:00:28.712 ********* 
+2019-07-13 13:39:05,734 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:39:05,749 p=57532 u=superzjn |  TASK [desktop-cleanup : Remove shitty Amazon shortcut] *********************************************************************************
+2019-07-13 13:39:05,749 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:05 -0700 (0:00:00.643)       0:00:29.355 ********* 
+2019-07-13 13:39:05,850 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:39:05,865 p=57532 u=superzjn |  TASK [desktop-cleanup : Disable WebApps and other shitty integrations] *****************************************************************
+2019-07-13 13:39:05,865 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:05 -0700 (0:00:00.115)       0:00:29.471 ********* 
+2019-07-13 13:39:05,883 p=57532 u=superzjn |  skipping: [localhost] => (item=gsettings set com.canonical.unity.webapps integration-allowed false) 
+2019-07-13 13:39:05,887 p=57532 u=superzjn |  skipping: [localhost] => (item=gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-amazon.scope', 'more_suggestions-u1ms.scope', 'more_suggestions-populartracks.scope', 'music-musicstore.scope', 'more_suggestions-ebay.scope', 'more_suggestions-ubuntushop.scope', 'more_suggestions-skimlinks.scope']") 
+2019-07-13 13:39:05,893 p=57532 u=superzjn |  skipping: [localhost] => (item=gsettings set com.canonical.unity.webapps preauthorized-domains "[]") 
+2019-07-13 13:39:05,897 p=57532 u=superzjn |  skipping: [localhost] => (item=gsettings set com.canonical.Unity.ApplicationsLens display-available-apps false) 
+2019-07-13 13:39:05,912 p=57532 u=superzjn |  TASK [desktop-cleanup : Remove exemples shortcut] **************************************************************************************
+2019-07-13 13:39:05,912 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:05 -0700 (0:00:00.047)       0:00:29.518 ********* 
+2019-07-13 13:39:06,006 p=57532 u=superzjn |  ok: [localhost]
+2019-07-13 13:39:06,020 p=57532 u=superzjn |  TASK [desktop-cleanup : Remove XDG directories] ****************************************************************************************
+2019-07-13 13:39:06,021 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:06 -0700 (0:00:00.108)       0:00:29.627 ********* 
+2019-07-13 13:39:06,125 p=57532 u=superzjn |  ok: [localhost] => (item=Documents)
+2019-07-13 13:39:06,217 p=57532 u=superzjn |  ok: [localhost] => (item=Modèles)
+2019-07-13 13:39:06,306 p=57532 u=superzjn |  ok: [localhost] => (item=Images)
+2019-07-13 13:39:06,398 p=57532 u=superzjn |  ok: [localhost] => (item=Vidéos)
+2019-07-13 13:39:06,490 p=57532 u=superzjn |  ok: [localhost] => (item=Musique)
+2019-07-13 13:39:06,582 p=57532 u=superzjn |  changed: [localhost] => (item=Public)
+2019-07-13 13:39:06,693 p=57532 u=superzjn |  ok: [localhost] => (item=Téléchargements)
+2019-07-13 13:39:06,712 p=57532 u=superzjn |  TASK [desktop-cleanup : Run xdg-user-dirs-update] **************************************************************************************
+2019-07-13 13:39:06,712 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:06 -0700 (0:00:00.691)       0:00:30.318 ********* 
+2019-07-13 13:39:06,808 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:39:06,823 p=57532 u=superzjn |  TASK [desktop-autostart : Unhide all startup applications] *****************************************************************************
+2019-07-13 13:39:06,823 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:06 -0700 (0:00:00.110)       0:00:30.429 ********* 
+2019-07-13 13:39:06,929 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/spice-vdagent.desktop)
+2019-07-13 13:39:07,024 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/pulseaudio.desktop)
+2019-07-13 13:39:07,119 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/gnome-keyring-ssh.desktop)
+2019-07-13 13:39:07,213 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.DiskUtilityNotify.desktop)
+2019-07-13 13:39:07,325 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/nautilus-autostart.desktop)
+2019-07-13 13:39:07,419 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.Clipboard.desktop)
+2019-07-13 13:39:07,509 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/at-spi-dbus-bus.desktop)
+2019-07-13 13:39:07,599 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.Datetime.desktop)
+2019-07-13 13:39:07,686 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/gnome-keyring-secrets.desktop)
+2019-07-13 13:39:07,781 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/vmware-user.desktop)
+2019-07-13 13:39:07,875 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.Sharing.desktop)
+2019-07-13 13:39:07,966 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.MediaKeys.desktop)
+2019-07-13 13:39:08,058 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/gnome-welcome-tour.desktop)
+2019-07-13 13:39:08,153 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.DejaDup.Monitor.desktop)
+2019-07-13 13:39:08,249 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.Rfkill.desktop)
+2019-07-13 13:39:08,339 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/gnome-keyring-pkcs11.desktop)
+2019-07-13 13:39:08,427 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/nm-applet.desktop)
+2019-07-13 13:39:08,518 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.Housekeeping.desktop)
+2019-07-13 13:39:08,609 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.Color.desktop)
+2019-07-13 13:39:08,697 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/print-applet.desktop)
+2019-07-13 13:39:08,792 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.Wacom.desktop)
+2019-07-13 13:39:08,880 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/gnome-software-service.desktop)
+2019-07-13 13:39:08,971 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.ScreensaverProxy.desktop)
+2019-07-13 13:39:09,062 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/gnome-initial-setup-copy-worker.desktop)
+2019-07-13 13:39:09,151 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/snap-userd-autostart.desktop)
+2019-07-13 13:39:09,248 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.Power.desktop)
+2019-07-13 13:39:09,335 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/orca-autostart.desktop)
+2019-07-13 13:39:09,428 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.Mouse.desktop)
+2019-07-13 13:39:09,519 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/user-dirs-update-gtk.desktop)
+2019-07-13 13:39:09,606 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.Sound.desktop)
+2019-07-13 13:39:09,700 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.Keyboard.desktop)
+2019-07-13 13:39:09,792 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/gnome-initial-setup-first-login.desktop)
+2019-07-13 13:39:09,883 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/xdg-user-dirs.desktop)
+2019-07-13 13:39:09,969 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.A11ySettings.desktop)
+2019-07-13 13:39:10,059 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/update-notifier.desktop)
+2019-07-13 13:39:10,146 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.PrintNotifications.desktop)
+2019-07-13 13:39:10,237 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.XSettings.desktop)
+2019-07-13 13:39:10,329 p=57532 u=superzjn |  changed: [localhost] => (item=/etc/xdg/autostart/org.gnome.SettingsDaemon.Smartcard.desktop)
+2019-07-13 13:39:10,359 p=57532 u=superzjn |  TASK [desktop-autostart : Create startup application directory] ************************************************************************
+2019-07-13 13:39:10,359 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:10 -0700 (0:00:03.535)       0:00:33.965 ********* 
+2019-07-13 13:39:10,485 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:39:10,501 p=57532 u=superzjn |  TASK [desktop-autostart : Add new startup entries] *************************************************************************************
+2019-07-13 13:39:10,501 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:10 -0700 (0:00:00.142)       0:00:34.107 ********* 
+2019-07-13 13:39:10,796 p=57532 u=superzjn |  changed: [localhost] => (item={u'name': u'terminal', u'exec': u'gnome-terminal --maximize'})
+2019-07-13 13:39:10,811 p=57532 u=superzjn |  TASK [desktop-autostart : Copy startup applications] ***********************************************************************************
+2019-07-13 13:39:10,812 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:10 -0700 (0:00:00.310)       0:00:34.418 ********* 
+2019-07-13 13:39:10,849 p=57532 u=superzjn |  skipping: [localhost] => (item=deja-dup-monitor.desktop) 
+2019-07-13 13:39:10,874 p=57532 u=superzjn |  skipping: [localhost] => (item=onboard-autostart.desktop) 
+2019-07-13 13:39:11,017 p=57532 u=superzjn |  changed: [localhost] => (item=orca-autostart.desktop)
+2019-07-13 13:39:11,021 p=57532 u=superzjn |  skipping: [localhost] => (item=vino-server.desktop) 
+2019-07-13 13:39:11,036 p=57532 u=superzjn |  TASK [desktop-autostart : Disable startup applications] ********************************************************************************
+2019-07-13 13:39:11,036 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:11 -0700 (0:00:00.224)       0:00:34.642 ********* 
+2019-07-13 13:39:11,054 p=57532 u=superzjn |  skipping: [localhost] => (item=deja-dup-monitor.desktop) 
+2019-07-13 13:39:11,058 p=57532 u=superzjn |  skipping: [localhost] => (item=onboard-autostart.desktop) 
+2019-07-13 13:39:11,147 p=57532 u=superzjn |  changed: [localhost] => (item=orca-autostart.desktop)
+2019-07-13 13:39:11,151 p=57532 u=superzjn |  skipping: [localhost] => (item=vino-server.desktop) 
+2019-07-13 13:39:11,167 p=57532 u=superzjn |  TASK [desktop-preferences-unity : Install Unity tweak tool] ****************************************************************************
+2019-07-13 13:39:11,167 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:11 -0700 (0:00:00.130)       0:00:34.773 ********* 
+2019-07-13 13:39:52,044 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:39:52,063 p=57532 u=superzjn |  TASK [desktop-preferences-unity : Set global keybindings] ******************************************************************************
+2019-07-13 13:39:52,063 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:52 -0700 (0:00:40.895)       0:01:15.669 ********* 
+2019-07-13 13:39:52,181 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]")
+2019-07-13 13:39:52,280 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "[]")
+2019-07-13 13:39:52,376 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot '<Ctrl><Shift>A')
+2019-07-13 13:39:52,466 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot-clip '<Ctrl><Shift>Print')
+2019-07-13 13:39:52,563 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot 'Print')
+2019-07-13 13:39:52,662 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot-clip '<Ctrl>Print')
+2019-07-13 13:39:52,760 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys window-screenshot '<Alt>Print')
+2019-07-13 13:39:52,861 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys window-screenshot-clip '<Ctrl><Alt>Print')
+2019-07-13 13:39:52,958 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier '')
+2019-07-13 13:39:53,055 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-in '')
+2019-07-13 13:39:53,151 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-out '')
+2019-07-13 13:39:53,255 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys screenreader '')
+2019-07-13 13:39:53,353 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings maximize "['<Control><Super>Up']")
+2019-07-13 13:39:53,450 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Control><Super>Down']")
+2019-07-13 13:39:53,544 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Alt>Tab']")
+2019-07-13 13:39:53,641 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings switch-group "[]")
+2019-07-13 13:39:53,731 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Shift><Control><Alt>Down']")
+2019-07-13 13:39:53,828 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Shift><Control><Alt>Left']")
+2019-07-13 13:39:53,928 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Shift><Control><Alt>Right']")
+2019-07-13 13:39:54,032 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Shift><Control><Alt>Up']")
+2019-07-13 13:39:54,137 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Control><Alt>Down']")
+2019-07-13 13:39:54,245 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Control><Alt>Left']")
+2019-07-13 13:39:54,340 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Control><Alt>Right']")
+2019-07-13 13:39:54,433 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Control><Alt>Up']")
+2019-07-13 13:39:54,532 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']")
+2019-07-13 13:39:54,628 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "['<Super>s']")
+2019-07-13 13:39:54,721 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys terminal '<Control><Alt>t')
+2019-07-13 13:39:54,817 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver '<Super>l')
+2019-07-13 13:39:54,919 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys home '<Super>e')
+2019-07-13 13:39:55,015 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']")
+2019-07-13 13:39:55,105 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Moniteur système')
+2019-07-13 13:39:55,202 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'gnome-system-monitor')
+2019-07-13 13:39:55,298 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Primary><Alt>Delete')
+2019-07-13 13:39:55,392 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ name 'Chromium focus and new tab')
+2019-07-13 13:39:55,487 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ command '/home/superzjn/bin/chromium-focus-and-new-tab')
+2019-07-13 13:39:55,584 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ binding '<Super>x')
+2019-07-13 13:39:55,678 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/ name 'Terminal launch or focus')
+2019-07-13 13:39:55,772 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/ command '/home/superzjn/bin/terminal-launch-or-focus')
+2019-07-13 13:39:55,870 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/ binding '<Super>r')
+2019-07-13 13:39:55,898 p=57532 u=superzjn |  TASK [desktop-preferences-unity : Set Unity preferences] *******************************************************************************
+2019-07-13 13:39:55,898 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:55 -0700 (0:00:03.835)       0:01:19.504 ********* 
+2019-07-13 13:39:56,004 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set com.canonical.Unity.Lenses home-lens-default-view "['applications.scope']")
+2019-07-13 13:39:56,098 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set com.canonical.Unity.Lenses always-search "['applications.scope']")
+2019-07-13 13:39:56,194 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set com.canonical.Unity form-factor 'Netbook')
+2019-07-13 13:39:56,284 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set com.canonical.Unity.Lenses remote-content-search 'none')
+2019-07-13 13:39:56,393 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.background primary-color '#000000')
+2019-07-13 13:39:56,540 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.session idle-delay "uint32 3600")
+2019-07-13 13:39:56,656 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.xsettings hinting 'medium')
+2019-07-13 13:39:56,776 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'grayscale')
+2019-07-13 13:39:56,891 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set com.canonical.Unity.Launcher favorites "['application://nemo.desktop', 'application://chromium-browser.desktop', 'application://sublime-text.desktop', 'application://atom.desktop', 'application://gnome-terminal.desktop', 'application://thunderbird.desktop', 'application://filezilla.desktop', 'unity://running-apps', 'unity://expo-icon', 'unity://devices', 'unity://desktop-icon']")
+2019-07-13 13:39:56,909 p=57532 u=superzjn |  TASK [desktop-preferences-unity : Set workspaces preferences] **************************************************************************
+2019-07-13 13:39:56,909 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:56 -0700 (0:00:01.010)       0:01:20.515 ********* 
+2019-07-13 13:39:57,032 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2)
+2019-07-13 13:39:57,136 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2)
+2019-07-13 13:39:57,237 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.desktop.wm.preferences num-workspaces 4)
+2019-07-13 13:39:57,253 p=57532 u=superzjn |  TASK [desktop-preferences-unity : Set Nautilus preferences] ****************************************************************************
+2019-07-13 13:39:57,253 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:57 -0700 (0:00:00.344)       0:01:20.859 ********* 
+2019-07-13 13:39:57,372 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view')
+2019-07-13 13:39:57,478 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.nautilus.icon-view default-zoom-level 'small')
+2019-07-13 13:39:57,577 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.nautilus.list-view default-zoom-level 'small')
+2019-07-13 13:39:57,677 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.nautilus.list-view use-tree-view true)
+2019-07-13 13:39:57,771 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.nautilus.preferences thumbnail-limit "uint64 5242880")
+2019-07-13 13:39:57,868 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.nautilus.icon-view thumbnail-size 64)
+2019-07-13 13:39:57,959 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ icon-size 24)
+2019-07-13 13:39:57,976 p=57532 u=superzjn |  TASK [desktop-preferences-unity : Set Rhythmbox preferences] ***************************************************************************
+2019-07-13 13:39:57,976 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:57 -0700 (0:00:00.722)       0:01:21.582 ********* 
+2019-07-13 13:39:58,082 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.rhythmbox.player play-order 'linear-loop')
+2019-07-13 13:39:58,179 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.rhythmbox.player use-xfade-backend true)
+2019-07-13 13:39:58,276 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.rhythmbox.player transition-time 1)
+2019-07-13 13:39:58,369 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.rhythmbox.sources visible-columns "['post-time', 'artist', 'duration', 'track-number', 'album', 'date']")
+2019-07-13 13:39:58,464 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.rhythmbox.podcast download-interval 'daily')
+2019-07-13 13:39:58,481 p=57532 u=superzjn |  TASK [desktop-preferences-unity : Set Gedit preferences] *******************************************************************************
+2019-07-13 13:39:58,482 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:58 -0700 (0:00:00.505)       0:01:22.088 ********* 
+2019-07-13 13:39:58,584 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.gedit.preferences.editor bracket-matching true)
+2019-07-13 13:39:58,679 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.gedit.preferences.editor create-backup-copy false)
+2019-07-13 13:39:58,773 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.gedit.preferences.editor display-line-numbers true)
+2019-07-13 13:39:58,887 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.gedit.preferences.editor editor-font 'Hack 10')
+2019-07-13 13:39:58,994 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.gedit.preferences.editor highlight-current-line true)
+2019-07-13 13:39:59,094 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.gedit.preferences.editor insert-spaces true)
+2019-07-13 13:39:59,195 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.gedit.preferences.editor scheme 'oblivion')
+2019-07-13 13:39:59,308 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.gedit.preferences.editor tabs-size "uint32 4")
+2019-07-13 13:39:59,412 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.gedit.preferences.editor use-default-font false)
+2019-07-13 13:39:59,522 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.gedit.preferences.editor wrap-mode 'none')
+2019-07-13 13:39:59,541 p=57532 u=superzjn |  TASK [desktop-preferences-unity : Set Calc preferences] ********************************************************************************
+2019-07-13 13:39:59,541 p=57532 u=superzjn |  Saturday 13 July 2019  13:39:59 -0700 (0:00:01.059)       0:01:23.147 ********* 
+2019-07-13 13:39:59,659 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.calculator accuracy 8)
+2019-07-13 13:39:59,756 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.calculator button-mode 'advanced')
+2019-07-13 13:39:59,869 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.calculator number-format 'fixed')
+2019-07-13 13:39:59,978 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.calculator source-units 'USD')
+2019-07-13 13:40:00,084 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.calculator target-units 'CNY')
+2019-07-13 13:40:00,102 p=57532 u=superzjn |  TASK [desktop-preferences-unity : Set Terminal preferences] ****************************************************************************
+2019-07-13 13:40:00,102 p=57532 u=superzjn |  Saturday 13 July 2019  13:40:00 -0700 (0:00:00.561)       0:01:23.708 ********* 
+2019-07-13 13:40:00,214 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Settings new-terminal-mode 'tab')
+2019-07-13 13:40:00,324 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Settings tab-position 'top')
+2019-07-13 13:40:00,426 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Settings shortcuts-enabled true)
+2019-07-13 13:40:00,528 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Settings tab-policy 'automatic')
+2019-07-13 13:40:00,632 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ new-window '<Ctrl><Shift>n')
+2019-07-13 13:40:00,742 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ new-tab '<Ctrl><Shift>t')
+2019-07-13 13:40:00,838 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ close-tab '<Ctrl><Shift>w')
+2019-07-13 13:40:00,938 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ close-window '<Ctrl><Shift>q')
+2019-07-13 13:40:01,034 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ next-tab '<Control>Page_Down')
+2019-07-13 13:40:01,127 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ prev-tab '<Control>Page_Up')
+2019-07-13 13:40:01,221 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ copy '<Ctrl><Shift>c')
+2019-07-13 13:40:01,316 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ paste '<Ctrl><Shift>v')
+2019-07-13 13:40:01,413 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ find '<Control><Shift>F')
+2019-07-13 13:40:01,516 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ find-clear '<Control><Shift>J')
+2019-07-13 13:40:01,621 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ find-next '<Control><Shift>G')
+2019-07-13 13:40:01,717 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ find-previous '<Control><Shift>H')
+2019-07-13 13:40:01,823 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ full-screen 'F11')
+2019-07-13 13:40:01,923 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ reset-and-clear '<Primary><Shift>l')
+2019-07-13 13:40:02,026 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ zoom-in '<Ctrl>plus')
+2019-07-13 13:40:02,134 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ zoom-normal '<Ctrl>0')
+2019-07-13 13:40:02,238 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ zoom-out '<Ctrl>minus')
+2019-07-13 13:40:02,345 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ detach-tab 'disabled')
+2019-07-13 13:40:02,444 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ help 'disabled')
+2019-07-13 13:40:02,542 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ move-tab-left '<Ctrl><Shift>Page_Up')
+2019-07-13 13:40:02,639 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ move-tab-right '<Ctrl><Shift>Page_Down')
+2019-07-13 13:40:02,733 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ save-contents 'disabled')
+2019-07-13 13:40:02,829 p=57532 u=superzjn |  changed: [localhost] => (item=gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ toggle-menubar 'disabled')
+2019-07-13 13:40:02,854 p=57532 u=superzjn |  TASK [desktop-preferences-unity : Update Terminal desktop file to run maximized] *******************************************************
+2019-07-13 13:40:02,854 p=57532 u=superzjn |  Saturday 13 July 2019  13:40:02 -0700 (0:00:02.752)       0:01:26.460 ********* 
+2019-07-13 13:40:03,044 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:40:03,059 p=57532 u=superzjn |  TASK [papirus-icon-theme : Add papirus-icon-theme repository] **************************************************************************
+2019-07-13 13:40:03,059 p=57532 u=superzjn |  Saturday 13 July 2019  13:40:03 -0700 (0:00:00.204)       0:01:26.665 ********* 
+2019-07-13 13:40:14,110 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:40:14,125 p=57532 u=superzjn |  TASK [papirus-icon-theme : Install papirus-icon-theme] *********************************************************************************
+2019-07-13 13:40:14,125 p=57532 u=superzjn |  Saturday 13 July 2019  13:40:14 -0700 (0:00:11.066)       0:01:37.731 ********* 
+2019-07-13 13:40:52,817 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:40:52,841 p=57532 u=superzjn |  TASK [albert : get public_key] *********************************************************************************************************
+2019-07-13 13:40:52,842 p=57532 u=superzjn |  Saturday 13 July 2019  13:40:52 -0700 (0:00:38.716)       0:02:16.448 ********* 
+2019-07-13 13:40:54,196 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:40:54,218 p=57532 u=superzjn |  TASK [albert : Installing apt-key] *****************************************************************************************************
+2019-07-13 13:40:54,218 p=57532 u=superzjn |  Saturday 13 July 2019  13:40:54 -0700 (0:00:01.376)       0:02:17.824 ********* 
+2019-07-13 13:40:54,829 p=57532 u=superzjn |  changed: [localhost]
+2019-07-13 13:40:54,844 p=57532 u=superzjn |  TASK [albert : Add deb repository] *****************************************************************************************************
+2019-07-13 13:40:54,844 p=57532 u=superzjn |  Saturday 13 July 2019  13:40:54 -0700 (0:00:00.626)       0:02:18.450 ********* 
+2019-07-13 13:40:59,208 p=57532 u=superzjn |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: apt.cache.FetchFailedException: E:The repository 'http://download.opensuse.org/repositories/home:/manuelschneid3r/Ubuntu_18.04  Release' does not have a Release file.
+2019-07-13 13:40:59,211 p=57532 u=superzjn |  fatal: [localhost]: FAILED! => changed=false 
+  module_stderr: |-
+    Traceback (most recent call last):
+      File "/home/superzjn/.ansible/tmp/ansible-tmp-1563050454.86-85129775533283/AnsiballZ_apt_repository.py", line 114, in <module>
+        _ansiballz_main()
+      File "/home/superzjn/.ansible/tmp/ansible-tmp-1563050454.86-85129775533283/AnsiballZ_apt_repository.py", line 106, in _ansiballz_main
+        invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)
+      File "/home/superzjn/.ansible/tmp/ansible-tmp-1563050454.86-85129775533283/AnsiballZ_apt_repository.py", line 49, in invoke_module
+        imp.load_module('__main__', mod, module, MOD_DESC)
+      File "/tmp/ansible_apt_repository_payload_L1dyKm/__main__.py", line 554, in <module>
+      File "/tmp/ansible_apt_repository_payload_L1dyKm/__main__.py", line 546, in main
+      File "/usr/lib/python2.7/dist-packages/apt/cache.py", line 559, in update
+        raise FetchFailedException(e)
+    apt.cache.FetchFailedException: E:The repository 'http://download.opensuse.org/repositories/home:/manuelschneid3r/Ubuntu_18.04  Release' does not have a Release file.
+  module_stdout: ''
+  msg: |-
+    MODULE FAILURE
+    See stdout/stderr for the exact error
+  rc: 1
+2019-07-13 13:40:59,212 p=57532 u=superzjn |  PLAY RECAP *****************************************************************************************************************************
+2019-07-13 13:40:59,212 p=57532 u=superzjn |  localhost                  : ok=54   changed=28   unreachable=0    failed=1    skipped=7    rescued=0    ignored=0   
+2019-07-13 13:40:59,212 p=57532 u=superzjn |  Saturday 13 July 2019  13:40:59 -0700 (0:00:04.368)       0:02:22.818 ********* 
+2019-07-13 13:40:59,212 p=57532 u=superzjn |  =============================================================================== 
+2019-07-13 13:40:59,212 p=57532 u=superzjn |  desktop-preferences-unity : Install Unity tweak tool --------------------------------------------------------------------------- 40.90s
+2019-07-13 13:40:59,213 p=57532 u=superzjn |  papirus-icon-theme : Install papirus-icon-theme -------------------------------------------------------------------------------- 38.72s
+2019-07-13 13:40:59,213 p=57532 u=superzjn |  papirus-icon-theme : Add papirus-icon-theme repository ------------------------------------------------------------------------- 11.07s
+2019-07-13 13:40:59,213 p=57532 u=superzjn |  desktop : Install common desktop packages -------------------------------------------------------------------------------------- 10.40s
+2019-07-13 13:40:59,213 p=57532 u=superzjn |  phantomjs : Install PhantomJS dependencies -------------------------------------------------------------------------------------- 5.68s
+2019-07-13 13:40:59,213 p=57532 u=superzjn |  albert : Add deb repository ----------------------------------------------------------------------------------------------------- 4.37s
+2019-07-13 13:40:59,213 p=57532 u=superzjn |  desktop-preferences-unity : Set global keybindings ------------------------------------------------------------------------------ 3.84s
+2019-07-13 13:40:59,213 p=57532 u=superzjn |  desktop-autostart : Unhide all startup applications ----------------------------------------------------------------------------- 3.54s
+2019-07-13 13:40:59,213 p=57532 u=superzjn |  desktop-preferences-unity : Set Terminal preferences ---------------------------------------------------------------------------- 2.75s
+2019-07-13 13:40:59,213 p=57532 u=superzjn |  albert : get public_key --------------------------------------------------------------------------------------------------------- 1.38s
+2019-07-13 13:40:59,213 p=57532 u=superzjn |  docker : Installing apt-key ----------------------------------------------------------------------------------------------------- 1.32s
+2019-07-13 13:40:59,213 p=57532 u=superzjn |  debug : Install common packages ------------------------------------------------------------------------------------------------- 1.13s
+2019-07-13 13:40:59,213 p=57532 u=superzjn |  desktop-preferences-unity : Set Gedit preferences ------------------------------------------------------------------------------- 1.06s
+2019-07-13 13:40:59,214 p=57532 u=superzjn |  desktop-preferences-unity : Set Unity preferences ------------------------------------------------------------------------------- 1.01s
+2019-07-13 13:40:59,214 p=57532 u=superzjn |  docker : Install ---------------------------------------------------------------------------------------------------------------- 1.00s
+2019-07-13 13:40:59,214 p=57532 u=superzjn |  ssh : Install SSH Server -------------------------------------------------------------------------------------------------------- 0.99s
+2019-07-13 13:40:59,214 p=57532 u=superzjn |  java-openjdk : Install Default OpenJDK ------------------------------------------------------------------------------------------ 0.99s
+2019-07-13 13:40:59,214 p=57532 u=superzjn |  intellij : Install "intellij-idea-ultimate" with option --classic --------------------------------------------------------------- 0.88s
+2019-07-13 13:40:59,214 p=57532 u=superzjn |  desktop-preferences-unity : Set Nautilus preferences ---------------------------------------------------------------------------- 0.72s
+2019-07-13 13:40:59,214 p=57532 u=superzjn |  desktop-cleanup : Remove XDG directories ---------------------------------------------------------------------------------------- 0.69s

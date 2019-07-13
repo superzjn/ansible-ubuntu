@@ -5,7 +5,7 @@
   become: true
 
 - name: Install PhantomJS dependencies
-  apt: name={{ package }} state=latest cache_valid_time={{ aptcachetime }}
+  apt: name={{ packages }} state=latest cache_valid_time={{ aptcachetime }}
   vars:
     packages:
     - fontconfig

@@ -1,0 +1,4 @@
+# Install tor
+- name: Install tor
+  apt: name=tor state=latest update_cache=yes cache_valid_time={{ aptcachetime }}
+  become: true

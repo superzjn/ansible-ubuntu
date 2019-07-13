@@ -1,0 +1,10 @@
+---
+
+- name: Add Neofetch repository
+  apt_repository: repo="ppa:ppa:dawidd0811/neofetch" state=present
+  become: true
+
+- name: Install Neofetch
+  apt: name=neofetch state=latest update_cache=yes cache_valid_time={{ aptcachetime }}
+  become: true
+

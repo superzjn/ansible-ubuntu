@@ -1,5 +1,6 @@
 # Install a snap with classic confinement
 - name: Install "intellij-idea-ultimate" with option --classic
+  become: true
   snap:
     name: intellij-idea-ultimate
     classic: yes
