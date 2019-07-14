@@ -1,7 +1,7 @@
 ---
 
 - name: Add Neofetch repository
-  apt_repository: repo="ppa:ppa:dawidd0811/neofetch" state=present
+  apt_repository: repo="ppa:dawidd0811/neofetch" state=present
   become: true
 
 - name: Install Neofetch
