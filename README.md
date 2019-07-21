@@ -11,7 +11,7 @@ Ansible roles to setup Ubuntu desktop and Ubuntu server (14.04 and 16.04). This 
 First, you need to install Git and Ansible :
 ```
 sudo apt-get install git
-git clone https://github.com/Benoth/ansible-ubuntu.git
+git clone https://github.com/superzjn/ansible-ubuntu.git
 cd ansible-ubuntu
 ./install.sh
 ```
