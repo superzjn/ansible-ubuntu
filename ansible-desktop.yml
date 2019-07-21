@@ -5,31 +5,30 @@
   roles:
     # Must Have
     - { role: debug}                     # 调试
-    #    - { role: common}                    # 安装通用软件,需要看看哪些需要安装  pass
-    #    - { role: java-openjdk}              # java jdk  pass
-    #    - { role: intellij}                  # IntelliJ
-    #    - { role: zsh}                       # zshrc还需要更改  pass
-    #    - { role: ssh}                       # ssh
-    #    - { role: progress}                  # cp,mv进度
-    #    - { role: bcompare}                  # 对比工具
-    #    - { role: hack-bcompare}             # 破解对比工具
-    #    - { role: copyq}                     # 高级剪贴板
-    #    - { role: fonts}                     # powerline字体
-    #    - { role: neofetch}                  # Install neofetch
+    - { role: common}                    # 安装通用软件,需要看看哪些需要安装  pass
+    - { role: java-openjdk}              # java jdk  pass
+    - { role: intellij}                  # IntelliJ
+    - { role: zsh}                       # zshrc还需要更改  pass      - { role: ssh}                       # ssh
+    - { role: progress}                  # cp,mv进度
+    - { role: bcompare}                  # 对比工具
+    - { role: hack-bcompare}             # 破解对比工具
+    - { role: copyq}                     # 高级剪贴板
+    - { role: fonts}                     # powerline字体
+    - { role: neofetch}                  # Install neofetch
     #    - { role: tor}                       # Install tor
-    #    - { role: chrome}                    # chrome
-    #    - { role: desktop-cleanup}           # 删除亚马逊图标等
-    #    - { role: desktop-autostart}         # 添加删除自启动
-    #    - { role: clean}                     # 升级并清理系统
+    - { role: chrome}                    # chrome
+    - { role: desktop-cleanup}           # 删除亚马逊图标等
+    - { role: desktop-autostart}         # 添加删除自启动
+    - { role: clean}                     # 升级并清理系统
 
     #    # Useful software
     #    - { role: libreoffice}               # libreoffice
     - { role: remarkable}                # markdown编辑器
     #    - { role: docker}                    # docker
-    - { role: skype}                     # skype聊天
+    #    - { role: skype}                     # skype聊天
     #    - { role: vscode}                    # vscode
-    - { role: sublime3}                  # sublime3
-    - { role: shutter}                   # 截图工具
+    #    - { role: sublime3}                  # sublime3
+    #    - { role: shutter}                   # 截图工具
     #    - { role: sogoupinyin}               # 搜狗输入法
     #    - { role: wps}                       # wps
     #    - { role: wps_fonts}                 # wps 字体
