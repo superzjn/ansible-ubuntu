@@ -1,0 +1,15 @@
+# Install HomeBrew
+- name: Install Homebrew
+  command: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"'
+
+- name: Homebrew step2
+  command: 'test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)'
+
+- name: Homebrew step3
+  command: 'test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)'
+
+- name: Homebrew step4
+  command: 'test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile'
+
+- name: Homebrew step5
+  command: 'echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile'
