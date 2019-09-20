@@ -1,6 +1,4 @@
-# Install a snap Skype with classic confinement
-- name: Install Skype with option --classic
-  become: true
-  snap:
-    name: skype
-    classic: yes
+---
+
+- name: Install Skype
+  apt: deb="https://repo.skype.com/latest/skypeforlinux-64.deb"

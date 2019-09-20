@@ -5,47 +5,65 @@
   roles:
     # Must Have
     - { role: debug}                     # 调试
-    - { role: common}                    # 安装通用软件,需要看看哪些需要安装  pass
-    - { role: java-openjdk}              # java jdk  pass
+    - { role: common}                    # 安装通用软件,需要看看哪些需要安装  
+    - { role: java-openjdk}              # java jdk default
+    - { role: java-openjdk8}             # java jdk 8
     - { role: intellij}                  # IntelliJ
-    - { role: zsh}                       # zshrc还需要更改  pass      - { role: ssh}                       # ssh
     - { role: progress}                  # cp,mv进度
     - { role: bcompare}                  # 对比工具
     - { role: hack-bcompare}             # 破解对比工具
     - { role: copyq}                     # 高级剪贴板
     - { role: fonts}                     # powerline字体
     - { role: neofetch}                  # Install neofetch
-    #    - { role: tor}                       # Install tor
     - { role: chrome}                    # chrome
-    - { role: desktop-cleanup}           # 删除亚马逊图标等
+    - { role: desktop-cleanup}           # 删除亚马逊图标,games and unless apps
     - { role: desktop-autostart}         # 添加删除自启动
     - { role: clean}                     # 升级并清理系统
+    - { role: zsh}                       # zshrc还需要更改       
+    - { role: oh-my-zsh}                 # ohmy zsh
+    - { role: smartgit}                  # git客户端
+    - { role: remarkable}                # markdown编辑器
+    - { role: postman}                   # poastman
+
+    #    - { role: git}                # Included in common but in case you want it alone
+    #    - { role: curl}               # Included in common but in case you want it alone
+
+    #    - { role: tor}                       # Install tor
 
     #    # Useful software
     #    - { role: libreoffice}               # libreoffice
-    - { role: remarkable}                # markdown编辑器
     #    - { role: docker}                    # docker
-    #    - { role: skype}                     # skype聊天
-    #    - { role: vscode}                    # vscode
     #    - { role: sublime3}                  # sublime3
+    #    - { role: sublime3_2}                # sublime3  task2 
+    #    - { role: vscode}                    # vscode
+    #    - { role: vscode_2}                  # vscode task2
     #    - { role: shutter}                   # 截图工具
     #    - { role: sogoupinyin}               # 搜狗输入法
     #    - { role: wps}                       # wps
     #    - { role: wps_fonts}                 # wps 字体
-    #
+    #    - { role: ssh}                       # ssh
+    #    - { role: skype}                     # skype聊天
+    #    - { role: slack}                     # slack
+    #    - { role: prettyping}                # prettyping is a wrapper around the standard ping tool with the objective of making the output prettier, more colorful, more compact, and easier to read.
+    #    - { role:  no-screen-blank}          # slack
+
     #    # Common roles
     #    - { role: hosts}                     # hosts 文件修改
     #    - { role: locales}                   # 配置语言和时区
     #    - { role: phantomjs}                 # 无界面浏览器
+
     #    # Server roles
     #    - { role: fail2ban}                  # 防止暴力破解
     #    - { role: python}                    # python
+
     #    # Theme
     #    - { role: papirus-icon-theme}        # 界面主题
     #    - { role: numix-icon-theme}          # 界面主题
     #    - { role: arc-theme}                 # 界面主题
     #    - { role: adapta-theme}              # 界面主题
+
     #    # Desktop roles
+    #    - { role: xmind}                     # xmind
     #    - { role: desktop}                   # 安装软件,禁用guest账户
     #    - { role: desktop-preferences-unity} # 界面设置，快捷键设置
     #    - { role: altyo}                     # 下拉终端
@@ -78,7 +96,6 @@
     #    - { role: rofi}                      # 窗口切换器
     #    - { role: sift}                      # 类似grep
     #    - { role: slop}                      # 显示选中区域坐标
-    #    - { role: smartgit}                  # git客户端
     #    - { role: spotify}                   # 音乐客户端
     #    - { role: sunflower}                 # 双面板文件管理器
     #    - { role: thunderbird}               # 邮件客户端
