@@ -4,49 +4,47 @@
   hosts: localhost
   roles:
     # Must Have
-    - { role: debug}                     # 调试
-    - { role: common}                    # 安装通用软件,需要看看哪些需要安装  
-    - { role: java-openjdk}              # java jdk default
-    - { role: java-openjdk8}             # java jdk 8  (Need test)
-    - { role: intellij}                  # IntelliJ
-    - { role: progress}                  # cp,mv进度
-    - { role: bcompare}                  # 对比工具
-    - { role: hack-bcompare}             # 破解对比工具
-    - { role: copyq}                     # 高级剪贴板
-    - { role: fonts}                     # powerline字体
-    - { role: neofetch}                  # Install neofetch
-    - { role: chrome}                    # chrome
-    - { role: desktop-cleanup}           # 删除亚马逊图标,games and unless apps
-    - { role: desktop-autostart}         # 添加删除自启动
-    - { role: clean}                     # 升级并清理系统
-    - { role: zsh}                       # zshrc还需要更改       
-    - { role: oh-my-zsh}                 # ohmy zsh
-    - { role: smartgit}                  # git客户端
-    - { role: remarkable}                # markdown编辑器
-    - { role: postman}                   # poastman   (Need test)
+    # - { role: debug}                     # 调试
+    # - { role: common}                    # 安装通用软件,需要看看哪些需要安装   passed on 9/21
+    # - { role: java-openjdk}              # java jdk default  passed on 9/21
+    # - { role: java-openjdk8}             # java jdk 8  (Need test)   passed on 9/21
+    # - { role: intellij}                  # IntelliJ   passed on 9/21
+    # - { role: progress}                  # cp,mv进度  passed on 9/21
+    # - { role: bcompare}                  # 对比工具   passed on 9/21
+    # - { role: hack-bcompare}             # 破解对比工具   passed on 9/21
+    # - { role: copyq}                     # 高级剪贴板     passed on 9/21
+    # - { role: neofetch}                  # Install neofetch   passed on 9/21
+    # - { role: chrome}                    # chrome     passed on 9/21
+    # - { role: smartgit}                  # git客户端     passed on 9/21
+    # - { role: remarkable}                # markdown编辑器  passed on 9/21
+    # - { role: postman}                   # poastman   passed on 9/21
+    # - { role: desktop-cleanup}           # 删除亚马逊图标,games and unless apps  passed on 9/21
+    # - { role: desktop-autostart}         # 添加删除自启动   passed on 9/21
+    # - { role: clean}                     # 升级并清理系统   passed on 9/21
+    
+    # - { role: zsh}                       # zshrc还需要更改   passed on 9/21     
+    # - { role: oh-my-zsh}                 # ohmy zsh   passed on 9/21
+    # - { role: fonts}                     # powerline字体   passed on 9/21
+    # - { role: vscode}                    # vscode    passed on 9/21
+    # - { role: shutter}                   # 截图工具  passed on 9/21
+    # - { role: ssh}                       # ssh     passed on 9/21
+    # - { role: slack}                     # slack   passed on 9/21
 
-    #    - { role: git}                # Included in common but in case you want it alone
-    #    - { role: curl}               # Included in common but in case you want it alone
-
-    #    - { role: tor}                       # Install tor
+    # - { role: git}                # Included in common but in case you want it alone
+    # - { role: curl}               # Included in common but in case you want it alone
+ 
+    # - { role: homebrew}                  # Install homebrew (Failing)
+    # - { role: sublime3}                  # sublime3   (Failing)
+    # - { role: tor}                       # Install tor
 
     #    # Useful software
     #    - { role: libreoffice}               # libreoffice
     #    - { role: docker}                    # docker
-    #    - { role: sublime3}                  # sublime3   (Need test)
-    #    - { role: sublime3_2}                # sublime3  task2    (Need test)
-    #    - { role: vscode}                    # vscode    (Need test)
-    #    - { role: vscode_2}                  # vscode task2  (Need test)
-    #    - { role: shutter}                   # 截图工具
-    #    - { role: sogoupinyin}               # 搜狗输入法
+    #    - { role: sogoupinyin}               # 搜狗输入法  (Failing)
     #    - { role: wps}                       # wps
     #    - { role: wps_fonts}                 # wps 字体
-    #    - { role: ssh}                       # ssh
     #    - { role: skype}                     # skype聊天
-    #    - { role: slack}                     # slack   (Need test)
-    #    - { role: prettyping}                # prettyping is a wrapper around the standard ping tool with the objective of making the output prettier, more colorful, more compact, and easier to read.
-    #    - { role: no-screen-blank}           # slack
-    #    - { role: homebrew}                  # Install homebrew (Need test)
+    #    - { role: no-screen-blank}           # no-screen-blank
 
     #    # Common roles
     #    - { role: hosts}                     # hosts 文件修改
@@ -62,6 +60,7 @@
     #    - { role: numix-icon-theme}          # 界面主题
     #    - { role: arc-theme}                 # 界面主题
     #    - { role: adapta-theme}              # 界面主题
+    #    - { role: xfce-dockbarx}             # xfce桌面
 
     #    # Desktop roles
     #    - { role: xmind}                     # xmind
@@ -107,7 +106,6 @@
     #    - { role: vokoscreen}                # 屏幕录制软件
     #    - { role: wine}                      # Windows软件环境
     #    - { role: workrave}                  # 健康提醒
-    #    - { role: xfce-dockbarx}             # xfce桌面
     #
     #      # bspwm
     #    - { role: sxhkd}                     # x热键守护进程

@@ -18,7 +18,7 @@ cd ansible-ubuntu
 
 Then you need to customize the playbook `ansible-desktop.yml` (or create a new one) to suit your needs. Every roles are disabled by default.
 
-Run `ansible-playbook ansible-desktop.yml --ask-become-pass` and enter your sudo password to run the playbook
+Run `sudo ansible-playbook ansible-desktop.yml --ask-become-pass` and enter your sudo password to run the playbook
 
 ## Roles included
 
